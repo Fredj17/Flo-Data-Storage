@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+body {
+  background-color: hsl(229, 57%, 11%);
+  background-image: url("/images/bg-desktop.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.main {
+  height: 100vh;
+  gap: 25px;
+  position: relative;
+  margin-bottom: 50px;
+}
+.icons {
+  border: 1px solid transparent;
+  background-color: hsl(228, 56%, 26%);
+  border-radius: 0 50px 0 0;
+  padding: 25px;
+}
+.store {
+  background-color: hsl(228, 56%, 26%);
+  position: relative;
+}
+.tool-tip {
+  position: absolute;
+  bottom: 87%;
+  right: 9%;
+  font-family: "Raleway", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+}
+.tool-tip::after {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  right: 0;
+  width: 0;
+  height: 2px;
+  border-top: 26px solid #ffff;
+  border-left: 58px solid transparent;
+}
+
+.gig {
+  font-size: 10px;
+  font-weight: bold;
+  color: hsla(229, 7%, 55%, 0.044);
+  letter-spacing: 1px;
+}
+.bar {
+  background-color: hsl(229, 57%, 11%);
+  border-color: transparent !important;
+  position: relative;
+  height: 10px !important;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.fill {
+  background: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  width: 75%;
+  height: 100%;
+  background-size: 200% 100%;
+
+  border-color: transparent !important;
+  animation: gradientMove 2s linear infinite;
+}
+@keyframes gradientMove {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.fill::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 73%;
+  border: 1px solid transparent;
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(238, 86%, 80%);
+}
+.border-light-subtle {
+  background-color: hsl(229, 57%, 11%);
+}
+/* ****************Mobile View ********************/
+@media (max-width: 970px) {
+  body {
+    background-image: url(/images/bg-mobile.png);
+    background-position: middle;
+    background-size: cover;
+  }
+  .main {
+    flex-direction: column;
+  }
+  .icons {
+    width: 250px !important;
+  }
+  .tool-tip {
+    bottom: -31%;
+  }
+  .tool-tip::after {
+    border-top: 0;
+    border-left: 0;
+  }
+}

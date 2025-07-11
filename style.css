@@ -104,7 +104,7 @@ body {
 /* ****************Mobile View ********************/
 @media (max-width: 970px) {
   body {
-    background-image: url(/images/bg-mobile.png);
+    background-image: url(images/bg-mobile.png);
     background-position: middle;
     background-size: cover;
   }

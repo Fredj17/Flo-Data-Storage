@@ -121,4 +121,7 @@ body {
     border-top: 0;
     border-left: 0;
   }
+  .store{
+    width:auto !important;
+  }
 }
